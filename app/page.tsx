@@ -1,15 +1,21 @@
-import HeroSection from '@/components/HeroSection';
-import FeaturesSection from '@/components/FeaturesSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import ContactFormSection from '@/components/ContactFormSection';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import Features from '@/components/Features';
+import Testimonials from '@/components/Testimonials';
+import ContactForm from '@/components/ContactForm';
+import Footer from '@/components/Footer';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      <HeroSection />
-      <FeaturesSection />
-      <TestimonialsSection />
-      <ContactFormSection />
-    </>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        <Hero />
+        <Features />
+        <Testimonials />
+        <ContactForm />
+      </main>
+      <Footer />
+    </div>
   );
 }
